@@ -25,7 +25,7 @@ http://localhost:8080/h2-console/
 ````
 #### 4. Testando no Postman:
 ````
-http://localhost:8090/myAccount
+http://localhost:8090/myLoans
 ````
 ##### - se der um erro 415: Content type 'text/plain;charset=UTF-8' not supported], colocar no Headers:
 ````
@@ -76,11 +76,19 @@ mvn spring-boot:build-image
 
 ### Imagem criada: Successfully built image 'docker.io/tuyosistema/loansdockerize:latest'
 
-# O nome da imagem foi colocado aqui:
+### O nome da imagem foi colocado aqui:
 ````
     <image>
         <name>tuyosistema/${project.artifactId}</name>
     </image>
 ````
 
-# Imagem feita sem dockerfile, ou seja, sem as definicoes do mesmo.
+### Imagem feita sem dockerfile, ou seja, sem as definicoes do mesmo.
+
+### Correndo imagem no terminal ou cmd:
+````
+## Correndo o docker image com a porta:
+````
+docker run -p 8090:8090 hendersonporfirio/microservice-loans
+
+````
